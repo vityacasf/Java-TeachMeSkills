@@ -133,7 +133,8 @@ public class HomeworkExecutor
                 {
                     System.out.println("red");
                 } break;
-                case 2:{
+                case 2:
+                {
                     System.out.println("orange");
                 } break;
                 case 3:
@@ -152,9 +153,10 @@ public class HomeworkExecutor
                 {
                     System.out.println("dark blue");
                 } break;
-                case 7:{
+                case 7:
+                {
                     System.out.println("purple");
-                }break;
+                } break;
                 default:
                 {
                     System.out.println("Вы ввели бред");
@@ -167,7 +169,7 @@ public class HomeworkExecutor
             System.out.println("##Задание на нечётные числа в заданном диапазоне##");
 
             for (int i = 1; i < 100; i++){
-                if (i %2 == 0){
+                if (i % 2 == 0){
                     continue;
                 }
                 else
