@@ -2,58 +2,58 @@ package com.courses.lesson9;
 
 public class Point
 {
-    Integer startX;
-    Integer startY;
-    Integer startZ;
-    Integer endX;
-    Integer endY;
-    Integer endZ;
+    public Double startX;
+    public Double startY;
+    public Double startZ;
+    public Double endX;
+    public Double endY;
+    public Double endZ;
 
-    public Integer getStartX() {
+    public Double getStartX() {
         return startX;
     }
 
-    public void setStartX(Integer startX) {
+    public void setStartX(Double startX) {
         this.startX = startX;
     }
 
-    public Integer getStartY() {
+    public Double getStartY() {
         return startY;
     }
 
-    public void setStartY(Integer startY) {
+    public void setStartY(Double startY) {
         this.startY = startY;
     }
 
-    public Integer getStartZ() {
+    public Double getStartZ() {
         return startZ;
     }
 
-    public void setStartZ(Integer startZ) {
+    public void setStartZ(Double startZ) {
         this.startZ = startZ;
     }
 
-    public Integer getEndX() {
+    public Double getEndX() {
         return endX;
     }
 
-    public void setEndX(Integer endX) {
+    public void setEndX(Double endX) {
         this.endX = endX;
     }
 
-    public Integer getEndY() {
+    public Double getEndY() {
         return endY;
     }
 
-    public void setEndY(Integer endY) {
+    public void setEndY(Double endY) {
         this.endY = endY;
     }
 
-    public Integer getEndZ() {
+    public Double getEndZ() {
         return endZ;
     }
 
-    public void setEndZ(Integer endZ) {
+    public void setEndZ(Double endZ) {
         this.endZ = endZ;
     }
 }
