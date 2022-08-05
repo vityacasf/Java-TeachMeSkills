@@ -4,7 +4,7 @@ public class TwoDimensionalVector extends Point implements Lengthen
 {
     private Double x;
     private Double y;
-    private static final String description = "Этот вектор двуразмерный" ;
+    private static final String description = "Этот вектор двуразмерный";
     private Double lengthOfVector;
 
     public TwoDimensionalVector(Double startX, Double startY, Double endX, Double endY)
@@ -101,7 +101,7 @@ public class TwoDimensionalVector extends Point implements Lengthen
                 "x=" + x +
                 ", y=" + y +
                 ", Длина вектора=" + lengthOfVector +
-                ". Описание: " +description + '}';
+                ". Описание: " + description + '}';
     }
 
     public static TwoDimensionalVector[] createMassiveOfVectors(Integer N)
