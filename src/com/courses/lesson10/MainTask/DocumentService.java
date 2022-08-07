@@ -6,17 +6,10 @@ public class DocumentService
 {
     private static String numberOfDocument;
 
-    public static String printFirstEightNumbers(String numberOfDocument)
-    {
+    public static String printFirstEightNumbers(String numberOfDocument) {
         String numbers;
         numbers = numberOfDocument.substring(0, 4) + "-" + numberOfDocument.substring(9, 13);
         return numbers;
-    }
-
-    public static String printFormattedNumberOfDocument(String numberOfDocument)
-    {
-        String formattedNumber = "";
-        return formattedNumber;
     }
 
     public static String printOnlyLetters(String numberOfDocument)
