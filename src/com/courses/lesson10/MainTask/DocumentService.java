@@ -47,7 +47,7 @@ public class DocumentService
 
     public static StringBuilder printOnlyLettersBuilder(String numberOfDocument)
     {
-        numberOfDocument.toUpperCase();
+        numberOfDocument = numberOfDocument.toUpperCase();
 
         StringBuilder stringBuilder = new StringBuilder(numberOfDocument);
 
