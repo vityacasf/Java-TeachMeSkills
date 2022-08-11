@@ -12,5 +12,10 @@ public class Main
         System.out.println(document.startWith("1234-zxc-4321-qwe-4r5t"));
         System.out.println(document.changeLetter("1234-zxc-4321-qwe-4r5t"));
         System.out.println(document.printOnlyLettersBuilder("1234-zxc-4321-qwe-4r5t"));
+
+
+        int[] summa = new int[10];
+        int[] sum = new int[summa.length];
+
     }
 }
