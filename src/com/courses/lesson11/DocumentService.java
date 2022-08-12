@@ -21,18 +21,40 @@ public class DocumentService
     public static Boolean checkIncludeString(String numberOfDocument)
     {
         String string = "abc";
-
-        return numberOfDocument.toLowerCase().contains(string);
+        if (numberOfDocument.toLowerCase().contains(string))
+        {
+            return numberOfDocument.toLowerCase().contains(string);
+        }
+        else
+        {
+            throw new IllegalArgumentException("Не содержит последовательность" + string);
+        }
     }
 
     public static Boolean startWith(String numberOfDocument)
     {
-        return numberOfDocument.startsWith("555");
+        String startString = "555";
+        if (numberOfDocument.startsWith(startString))
+        {
+           return numberOfDocument.startsWith(startString);
+        }
+        else
+        {
+            throw new IllegalArgumentException("Номер документа не начинается " + startString);
+        }
     }
 
     public static Boolean endWith(String numberOfDocument)
     {
-        return numberOfDocument.endsWith("1a2b");
+        String endString = "1a2b";
+        if (numberOfDocument.endsWith(endString) == true)
+        {
+            return numberOfDocument.endsWith(endString);
+        }
+        else
+        {
+            throw new IllegalArgumentException("Номер документа не заканчивается" + endString);
+        }
     }
 
     public static StringBuilder changeLetter(String numberOfDocument)
@@ -49,10 +71,10 @@ public class DocumentService
 
         StringBuilder stringBuilder = new StringBuilder(numberOfDocument);
 
-        stringBuilder = stringBuilder.delete(0, 5);
-        stringBuilder = stringBuilder.delete(3, 9);
-        stringBuilder = stringBuilder.delete(6, 8);
-        stringBuilder = stringBuilder.delete(7, 8);
+        stringBuilder.delete(0, 5);
+        stringBuilder.delete(3, 9);
+        stringBuilder.delete(6, 8);
+        stringBuilder.delete(7, 8);
 
         stringBuilder.insert(3, "/");
         stringBuilder.insert(7, "/");
@@ -60,6 +82,51 @@ public class DocumentService
 
         return new StringBuilder("Letters:" + stringBuilder);
     }
+
+    public String executeErrorsContains(String numberOfDocument)
+    {
+        setNumberOfDocument(numberOfDocument);
+        try
+        {
+            checkIncludeString(numberOfDocument);
+            return "в номере документа есть нужная последовательность";
+        }
+        catch (IllegalArgumentException e)
+        {
+            return "в номере документа нет нужной последовательности";
+        }
+    }
+
+    public String executeErrorsStart(String numberOfDocument)
+    {
+        setNumberOfDocument(numberOfDocument);
+        try
+        {
+            startWith(numberOfDocument);
+            return "начинается как надо";
+        }
+        catch (IllegalArgumentException a)
+        {
+            return "не начинается как надо";
+        }
+    }
+
+    public String executeErrorsEnd(String numberOfDocument)
+    {
+        setNumberOfDocument(numberOfDocument);
+
+        try
+        {
+            endWith(numberOfDocument);
+            return "всё классно";
+        }
+        catch (IllegalArgumentException b)
+        {
+            return "что-то не так";
+        }
+    }
+
+
 
     public String getNumberOfDocument()
     {
